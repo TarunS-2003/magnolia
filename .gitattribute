@@ -1,1 +1,6 @@
-*.* linguist-language=Python
+*.java linguist-detectable=true
+*.c linguist-detectable=false
+*.html linguist-detectable=true
+*.css linguist-detectable=false
+*.cython linguist-detectable=false
+*.powershell linguist-detectable=false
