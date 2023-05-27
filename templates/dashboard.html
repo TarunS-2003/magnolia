@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+
+{%block title%}dashboard.{%endblock%}
+
+{%block content%}
+  <p>Welcome to magnolia. You are logged in!</p>
+
+  <a href = "{{url_for('logout')}}">Logout</a>
+
+{%endblock%}

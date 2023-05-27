@@ -1,0 +1,73 @@
+body{
+      background-image:url("https://website.taruns12.repl.co/static/banner.jpg");
+      height:100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment:fixed;
+      font-family: Helvetica, sans-serif;
+    }
+    .content{
+      width: 100%;
+      position: absolute;
+      top: 20%;
+      transform: translateY(50%);
+      text-align: center;
+      color: #fff;
+    }
+    .content p{
+      margin: 20px auto;
+      font-weight: 100;
+      line-height: 25px;
+    }
+    button{
+      width: 200px;
+      padding: 15px 0; 
+      text-align: center;
+      margin: 20px 10px;
+      border: 2px solid #00ffff;
+      border-radius: 25px;
+      font-weight: bold;
+      background: transparent;
+      color: #fff;
+      cursor: pointer; 
+      position: relative;
+      overflow: hidden;
+    }
+    span{
+      background: #00ffff;
+      height: 100%;
+      width: 0;
+      border-radius: 25px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: -1; 
+      transition: 0.5s;
+    }
+    button:hover span{
+      width: 100%;
+    }
+    button:hover{
+      border: none;
+    }
+  a:link{
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited{
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+.button{
+            color: white;
+            border-radius: 8px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            background: #42944c;
+            font-size: 150%;
+        }
+  p{
+    font-size: 20px;
+  } 
