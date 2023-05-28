@@ -6,18 +6,26 @@
 
   <p>Welcome to login page!</p>
 
+  <div class = "forms">
   <form method = "POST" action = "">
+    <div class = "group">
         {{ form.hidden_tag() }}
-        {{ form.username }}
-        {{ form.password }}
+    </div>
+    <div class = "group">
+        {{ form.username(class_ = "user") }}
+    </div>
+    <div class = "group">
+        {{ form.password(class_ = "pwd") }}
+    </div>
     <br><br>
+    <div class = "group">
         {{ form.submit(class_ = "button") }}
+    </div>
     <br><br>
-    {%if flag%}
-      <p>Invalid user</p>
-    {%endif%}
   </form>
+    <a href="{{url_for('signup')}}">Don't have an account ?Signup</a>
+</div>
   
-  <a href="{{url_for('signup')}}">Don't have an account ?Signup</a>
+  
 
 {%endblock%}

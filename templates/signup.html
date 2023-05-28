@@ -6,14 +6,24 @@
 
   <p>Welcome to signup page!</p>
 
+<div class = "forms">
   <form method = "POST" action = "">
+    <div class = "group">
         {{ form.hidden_tag() }}
-        {{ form.username }}
-        {{ form.password }}
-        <br><br>
+    </div>
+    <div class = "group">
+        {{ form.username(class_ = "user") }}
+    </div>
+    <div class = "group">
+        {{ form.password(class_ = "pwd") }}
+    </div>
+    <br><br>
+    <div class = "group">
         {{ form.submit(class_ = "button") }}
+    </div>
     <br><br>
   </form>
+</div>
 
   <a href="{{url_for('login')}}">Already have an account ?Login</a>
 
