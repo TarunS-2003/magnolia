@@ -122,9 +122,13 @@ tbody tr.hide td img {
     height: 0;
     transition: .2s ease-in-out .5s;
 }
-
+.btn.db{
+  display: flex;
+    justify-content: center; /* Horizontally center items */
+    align-items: center;
+}
 .btn {
-  width: 130px;
+  width: 100px;
   height: 40px;
   color: #fff;
   border-radius: 5px;

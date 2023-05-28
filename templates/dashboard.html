@@ -6,7 +6,7 @@
   <body>
     <main class = "table">
     <section class = "header">
-      <h1>Your Inventory</h1>
+      <h1>{{current_user.username}} 's Inventory</h1>
       <div class = "buttons">
       <a href="{{url_for('add')}}" class = "btn"><span>Add Item</span></a>
       <a href="{{url_for('analysis')}}" class = "btn"><span>Analysis</span></a>
@@ -31,10 +31,18 @@
                 <td>{{ item.quantity }}</td>
                 <td>{{ item.price }}</td>
                 <td>{{ item.quantity * item.price }}</td>
-                <td class = "btn">
+                <td class = "btn db">
                     <form action="{{ url_for('drop', item_id=item.id) }}" method="post">
                         <button type="submit" class = "btn"><span>Drop</span></button>
                     </form>
+                  <form action="{{ url_for('increment') }}" method="POST">
+              <input type="hidden" name="item_id" value="{{ item.id }}">
+              <button type="submit" class="btn">+</button>
+            </form>
+            <form action="{{ url_for('decrement') }}" method="POST">
+              <input type="hidden" name="item_id" value="{{ item.id }}">
+              <button type="submit" class="btn">-</button>
+            </form>
                 </td>
             </tr>
             {% endfor %}
