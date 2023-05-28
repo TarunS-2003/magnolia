@@ -3,8 +3,13 @@
 {%block title%}analysis.{%endblock%}
 
 {%block content%}
-<div class = "image">
+{% if error %}
+    <p>{{ error }}</p>
+    {% else %}
+    <div class = "image">
   <img src="{{ url_for('static', filename='graph.png') }}" alt="Inventory Graph">
 </div>
+  {% endif %}
+
 
 {%endblock%}
