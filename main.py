@@ -1,3 +1,4 @@
+import os
 from flask import Flask,render_template,url_for,redirect,request
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin,LoginManager,login_user,current_user,login_required,logout_user
@@ -5,6 +6,9 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
 from flask_bcrypt import Bcrypt
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 
 
 app = Flask(__name__,static_url_path = '/static')
@@ -144,6 +148,27 @@ def drop(item_id):
     db.session.commit()
     return redirect(url_for('dashboard'))
 
+@app.route('/analysis')
+
+@login_required
+
+def analysis():
+    items = Item.query.all()
+    labels = [item.name for item in items]
+    quantities = [item.quantity for item in items]
+
+    if os.path.exists('static/graph.png'):
+      os.remove('static/graph.png')
+      
+    plt.bar(labels, quantities,width = 0.5)
+    plt.xlabel('Product')
+    plt.ylabel('Quantity')
+    plt.title('Inventory Quantity')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.savefig('static/graph.png')  
+    
+    return render_template('analysis.html', items=items)
 #version1
 if __name__ == '__main__':
   app.run(debug = True,host = '0.0.0.0')

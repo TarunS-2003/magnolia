@@ -32,9 +32,12 @@ main.table {
     background-color: #fff4;
     padding: .8rem 1rem;
 
+    
     display: flex;
-    justify-content: space-between;
     align-items: center;
+}
+.buttons{
+  margin-left: auto;
 }
 
 .body {

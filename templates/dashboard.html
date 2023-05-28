@@ -7,8 +7,11 @@
     <main class = "table">
     <section class = "header">
       <h1>Your Inventory</h1>
+      <div class = "buttons">
       <a href="{{url_for('add')}}" class = "btn"><span>Add Item</span></a>
+      <a href="{{url_for('analysis')}}" class = "btn"><span>Analysis</span></a>
       <a href = "{{url_for('logout')}}" class = "btn"><span>Logout</span></a>
+      </div>
     </section>
     <section class = "body">
       <table>

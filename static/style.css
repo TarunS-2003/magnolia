@@ -6,6 +6,7 @@ body{
       background-size: cover;
       background-attachment:fixed;
       font-family: Helvetica, sans-serif;
+      margin: 0px 20px;
     }
     
   a:link{
@@ -44,7 +45,9 @@ tr:nth-child(even) {
   background-color: #dddddd;
 
 }
-
+.btn{
+  float: right;
+}
 .forms{
       width: 300px;
       height: 300px;
@@ -82,6 +85,7 @@ tr:nth-child(even) {
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
+  margin-left: 30px;
 }
 
 p{
@@ -125,6 +129,14 @@ p{
 label{
   color: white;
 }
+
+.image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 
 
