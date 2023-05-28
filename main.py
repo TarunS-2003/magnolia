@@ -20,7 +20,7 @@ db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 metadata = MetaData()
 app.secret_key = 'abcd'
-
+temporary = ""
 
 login_manager = LoginManager()
 login_manager.init_app(app)
