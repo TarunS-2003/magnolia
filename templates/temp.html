@@ -7,8 +7,6 @@
     <main class = "table">
     <section class = "header">
       <h1>Your Inventory</h1>
-      <a href="{{url_for('add')}}" class = "btn"><span>Add Item</span></a>
-      <a href = "{{url_for('logout')}}" class = "btn"><span>Logout</span></a>
     </section>
     <section class = "body">
       <table>
@@ -30,7 +28,7 @@
                 <td>{{ item.quantity * item.price }}</td>
                 <td class = "btn">
                     <form action="{{ url_for('drop', item_id=item.id) }}" method="post">
-                        <button type="submit" class = "btn"><span>Drop</span></button>
+                        <button type="submit">Drop</button>
                     </form>
                 </td>
             </tr>
