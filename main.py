@@ -15,7 +15,7 @@ import numpy as np
 
 app = Flask(__name__, static_url_path='/static')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
-app.config['SECRET_KEY'] = 'abcd'
+app.config['SECRET_KEY'] = os.environ['DB_SECRET_KEY']
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 metadata = MetaData()
