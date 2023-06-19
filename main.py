@@ -47,7 +47,7 @@ class SignupForm(FlaskForm):
         existing_user_username = User.query.filter_by(username=username.data).first()
 
         if existing_user_username:
-            raise ValidationError('That username already exists. Please choose a different one.')
+            return jsonify({'alert':'Username already exists'})
 
 
 class LoginForm(FlaskForm):
@@ -59,6 +59,10 @@ class LoginForm(FlaskForm):
 @app.route("/")
 def home():
     return render_template("home.html")
+
+@app.route("/about")
+def about():
+  return render_template("about.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -75,6 +79,8 @@ def login():
             if bcrypt.check_password_hash(user.password, form.password.data):
                 login_user(user)
                 return redirect(url_for('dashboard'))
+            else:
+              return jsonify({'error':'Incorrect Password'})
         else:
             return jsonify({'error': 'Invalid Username'})
 

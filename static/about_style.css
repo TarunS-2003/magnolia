@@ -1,0 +1,79 @@
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('about_banner.jpg');
+    }
+    
+    header {
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    header a {
+      font-family: Arial, sans-serif;
+      font-size: 48px;
+      margin: 0;
+      text-decoration: none;
+      color: white;
+    }
+    
+    .main-section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .main-section h2 {
+      font-family: Arial, sans-serif;
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    .main-section p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    
+    .features-section {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .feature {
+      flex-basis: 50%;
+      padding: 20px;
+    }
+    
+    .feature h3 {
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      color: #333;
+      margin: 10px 0;
+    }
+    
+    .feature p {
+      font-size: 16px;
+      color: #666;
+      line-height: 1.4;
+    }
+    
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    footer p {
+      margin: 0;
+    }

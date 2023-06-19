@@ -1,110 +1,134 @@
-body{
-      background-image:url("https://website.taruns12.repl.co/static/banner.jpg");
-      height:100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment:fixed;
-      font-family: Baskerville,sans-serif;
-    }
-    .navbar{
-      width: 85%;
-      margin: auto;
-      padding: 35px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 20px;
-    }
-    #logo{
-      width: 120px;
-      cursor: pointer;
-      color: white;
-      font-size: 25px;
-    }
-    .navbar ul li{
-      list-style: none;
-      display: inline-block;
-      margin:0 20px;
-      position: relative;
-    }
-    .navbar ul li a{
-      text-decoration:none; 
-      color: #fff;
-      text-transform: uppercase;
-    }
-    .navbar ul li::after{
-      content: '';
-      height: 3px; 
-      width: 0;
-      background: #0d98ba;    
-      position: absolute;
-      left: 0;
-      bottom: -10px;
-      transition: 0.5s;
-    }
-    .navbar ul li:hover::after{
-      width:100%;
-    }
-    .content{
-      width: 100%;
-      position: absolute;
-      top: 20%;
-      transform: translateY(50%);
-      text-align: center;
-      color: #fff;
-    }
-    .content h1{
-      font-size:70px; 
-      margin: 70px;
-    }
-    .content p{
-      margin: 20px auto;
-      font-weight: 100;
-      line-height: 25px;
-    }
-    button{
-      width: 200px;
-      padding: 15px 0; 
-      text-align: center;
-      font-size: 20px;
-      margin: 20px 10px;
-      border: 2px solid #0d98ba;
-      border-radius: 25px;
-      font-weight: bold;
-      background: transparent;
-      color: #fff;
-      cursor: pointer; 
-      position: relative;
-      overflow: hidden;
-    }
-    span{
-      background: #0d98ba;
-      height: 100%;
-      width: 0;
-      border-radius: 25px;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      z-index: -1; 
-      transition: 0.5s;
-    }
-    button:hover span{
-      width: 100%;
-    }
-    button:hover{
-      border: none;
-none}
-    a:link{
-      color: white;
-      background-color: transparent;
-      text-decoration: none;
-    }
-    a:visited{
-      color: white;
-      background-color: transparent;
-      text-decoration: none;
-    }
-    p{
-      font-size: 20px;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: url('background.jpg');
+  color: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+  font-weight: 80%;
+}
+
+.navbar a {
+  display: inline-flex;
+  justify-content: space-between;
+  font-size: 25px;
+  color: #569DAA;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+.front {
+  height: 100vh;
+  display: flex;
+  
+  align-items: center;
+  padding: 0 10%;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.content h1 {
+  font-size: 60px;
+  font-weight: 600px;
+  line-height: 1.2;
+}
+
+.content h3{
+  font-size: 40px;
+  font-weight: 600px;
+  color: #4B9CD3;
+}
+
+.content p {
+  font-size: 25px;
+  font-weight: 600px;
+}
+
+.btn {
+  height: 50px;
+  width: 365px;
+}
+
+.btn a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 120px;
+  text-decoration: none;
+  background-color: #4169E1;
+  border: 2px solid #4169E1;
+  border-radius: 10px;
+
+  font-size: 20px;
+  font-weight: 600px;
+  color: #B9EDDD;
+  letter-spacing: 1px;  
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.btn a:hover {
+  background: transparent;
+  color: #4169E1;
+}
+
+.btn a:nth-child(2) {
+  background: transparent;
+  color:  #4169E1;
+}
+
+.btn a:nth-child(2):hover {
+  color: #B9EDDD; 
+}
+
+.btn a:nth-child(2)::before {
+  background: #4169E1; 
+}
+
+.btn a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: transparent;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.btn a:hover::before {
+  width: 100%;
+}
